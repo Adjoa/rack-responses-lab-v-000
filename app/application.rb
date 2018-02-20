@@ -3,7 +3,7 @@ class Application
     resp = Rack::Response.new
     # afternoon = Time.new(nil, nil, nil, 12)
 
-    if Time.now <=> 12
+    if Time.now < 12
       resp.write "Morning"
     else
       resp.write "Afternoon"
