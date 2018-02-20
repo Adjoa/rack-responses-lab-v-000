@@ -6,7 +6,7 @@ class Application
     date = Date.today
     afternoon = Time.new(date.year, date.month, date.day, 12)
 
-    if  Time.now <=> afternoon
+    if  afternoon <=> Time.now
       resp.write "Morning"
     else
       resp.write "Afternoon"
