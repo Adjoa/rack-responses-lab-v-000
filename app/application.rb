@@ -3,12 +3,10 @@ require 'date'
 class Application
   def call(env)
     resp = Rack::Response.new
-    date = Date.today
-    afternoon = Time.new(date.year, date.month, date.day, 12)
 
-    if  afternoon <=> Time.now
+    if Time.now.hour < 12
       resp.write "Morning"
-    elsif Time.now <=> afternoon
+    else
       resp.write "Afternoon"
     end
 
