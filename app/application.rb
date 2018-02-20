@@ -8,7 +8,7 @@ class Application
 
     if  afternoon <=> Time.now
       resp.write "Morning"
-    else
+    elsif Time.now <=> afternoon
       resp.write "Afternoon"
     end
 
